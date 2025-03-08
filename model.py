@@ -2,6 +2,7 @@ from transformers import pipeline
 import torch 
 classifier = pipeline ("sentiment-analysis")
 
-res = classifier ("I've been waiting for a HuggingFace course my whole")
+def analyze (user_input):
 
-print (res) 
+    result = classifier (user_input)
+    return result
